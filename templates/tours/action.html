@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{{ action_title }}</h2>
+    <div class="card p-4 shadow-sm">
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label">Название тура</label>
+                <input type="text" name="title" class="form-control" value="{{ tour.title|default:'' }}" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Статус</label>
+                <select name="status" class="form-select">
+                    <option value="Active" {% if tour.status == 'Active' %}selected{% endif %}>Активен</option>
+                    <option value="Draft" {% if tour.status == 'Draft' %}selected{% endif %}>Черновик</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <a href="{% url 'tour_list' %}" class="btn btn-secondary">Отмена</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

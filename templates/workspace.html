@@ -1,10 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="d-flex w-100">
+        {% include "includes/toolbar.html" %}
+
+         <div class="min-vh-100 d-flex flex-column flex-grow-1">
+            <header class="mb-auto">
+                {% include "includes/header.html" %}
+            </header>
+
+            <main class="px-3 text-center">
+                {% block workspace %}{% endblock %}
+            </main>
+
+            <footer class="mt-auto text-white-50 text-center">
+                {% include "includes/footer.html" %}
+            </footer>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'file/css/loading.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'file/js/dashboard.js' %}"></script>
+    <script src="{% static 'file/js/loading.js' %}"></script>
+{% endblock %}

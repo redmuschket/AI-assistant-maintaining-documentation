@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% block examples %}
+{% load static %}
+
+<div class="examples-container">
+    <div class="examples-content-title">
+        <div class="section-title-zone">
+            <div class="section-title">Базы сообщества</div>
+            <div class="section-subtitle">Откройте для себя невероятные творения нашего сообщества создателей лора.</div>
+        </div>
+        <div class="examples-base-btn">
+            <a href="/index/base">все базы</a>
+        </div>
+    </div>
+
+    <div class="examples-content-grid">
+        {{ bases_html }}
+    </div>
+
+    <div class="examples-content-stats-grid">
+        {% load examples %}
+        {% render_examples_items %}
+    </div>
+</div>
+
+{% endblock %}

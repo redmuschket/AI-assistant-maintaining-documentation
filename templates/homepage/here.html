@@ -1,10 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% block here %}
+{% load static %}
+
+<div class="hero-container">
+    <div class="hero-content">
+        <div class="hero-title">
+            <span>Создавайте собственные</span>
+            <span class="highlight-green">базы</span>
+            <span>— фундаментальные коллекции лора.</span>
+        </div>
+        <div class="hero-subtitle">
+            Превратите идеи в интерактивные карточки сущностей: персонажей, артефактов, локаций, событий и многого другого. Собирайте их в базы, чтобы объяснять любой сеттинг через модульный подход к сторителлингу.
+        </div>
+
+        <div class="hero-buttons">
+            <a href="#" class="btna btn-create-base">
+                <img src="{% static 'homepage/image/add-white.svg' %}"
+                     alt="Плюс"
+                     class="add-base-icon default-icon">
+                <img src="{% static 'homepage/image/add-green.svg' %}"
+                     alt="Плюс"
+                     class="add-base-icon hover-icon">
+                Создать первую базу
+            </a>
+            <a href="/index/base" class="btna btn-show-base">
+                <img src="{% static 'homepage/image/show_green.svg' %}"
+                     alt="Глаз"
+                     class="show-icon default-icon">
+                <img src="{% static 'homepage/image/show_white.svg' %}"
+                     alt="Глаз"
+                     class="show-icon hover-icon">
+                Посмотреть примеры баз
+            </a>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <img
+                    src="{% static 'homepage/image/elements.svg' %}"
+                    alt="Элемент"
+                    class="elements-icon"
+                >
+                <div class="stat-number">15.000+</div>
+                <div class="stat-label">создателей</div>
+            </div>
+            <div class="stat-item">
+                <img
+                    src="{% static 'homepage/image/student-card.svg' %}"
+                    alt="Студент-карта"
+                    class="student-card-icon"
+                >
+                <div class="stat-number">50.000+</div>
+                <div class="stat-label">сущностей</div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-support-content">
+        {{ bases_support_html }}
+    </div>
+</div>
+
+{% endblock %}

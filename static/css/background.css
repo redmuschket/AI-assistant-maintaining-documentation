@@ -1,5 +1,5 @@
 .background-tree_pattern {
-    background: #F2F9E9 url('/sites/all/themes/anti_bootstrap/image/tree_pattern.svg');
+    background: #F2F9E9 url("/static/image/tree_pattern.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }

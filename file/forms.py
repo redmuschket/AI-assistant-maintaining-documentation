@@ -1,5 +1,7 @@
 from django import forms
-from .models import UploadedFile
+from .models import File
+import magic
+import os
 
 ALLOWED_TYPES = [
     'text/plain',
@@ -10,7 +12,7 @@ ALLOWED_TYPES = [
 
 class FileUploadForm(forms.ModelForm):
     class Meta:
-        model = UploadedFile
+        model = File
         fields = ['file']
         widgets = {
             'file': forms.FileInput(attrs={
@@ -28,7 +30,7 @@ class FileUploadForm(forms.ModelForm):
         if file.size > 5 * 1024 * 1024:  # 5MB
             raise forms.ValidationError("Файл слишком большой (макс. 5MB)")
 
-        mime_type = magic.from_buffer(file.read(1024), mime=True)
+        mime_type = magic.from_buffer(file.read(2048), mime=True)
         file.seek(0)
 
         if mime_type not in ALLOWED_TYPES:

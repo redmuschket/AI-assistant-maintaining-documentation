@@ -1,0 +1,50 @@
+Настройка
+git config --global user.name "Имя"       # установить имя
+git config --global user.email "email"    # установить email
+git config --list                         # проверить настройки
+
+Работа с репозиторием
+git init             # создать новый репозиторий
+git clone <url>      # склонировать существующий
+git status           # статус файлов
+git log              # история коммитов
+
+Отслеживание изменений
+git add <file>       # добавить файл в индекс (staging)
+git add .            # добавить все изменения
+git commit -m "msg"  # создать коммит
+git diff             # показать изменения
+git rm <file>        # удалить файл
+
+Работа с ветками
+git branch           # показать ветки
+git branch <name>    # создать ветку
+git checkout <name>  # переключиться на ветку
+git checkout -b <name>  # создать и перейти на ветку
+git merge <name>     # слияние ветки
+git branch -d <name> # удалить ветку
+
+Работа с удалённым репозиторием
+git remote -v        # посмотреть удалённые репозитории
+git push             # отправить изменения
+git push -u origin <branch>  # первый пуш: создаёт удалённую ветку и связывает с локальной
+git pull             # получить изменения и смержить
+git fetch            # получить изменения без слияния
+
+Отмена изменений
+git restore <file>       # отменить изменения в рабочей директории
+git restore --staged <file>  # убрать из индекса
+git reset --hard <commit>    # откат всего репозитория к коммиту
+git revert <commit>          # создать коммит, отменяющий предыдущий
+
+Переписывание истории
+git rebase <branch>            # перенести текущую ветку поверх другой
+git rebase -i HEAD~3           # интерактивно изменить последние 3 коммита
+git rebase --continue           # продолжить после разрешения конфликтов
+git rebase --abort              # отменить rebase, вернуть всё как было
+
+Манипуляция с коммитами
+git cherry-pick <commit>      # взять один коммит и применить в текущей ветке
+git cherry-pick --continue    # после ручного разрешения конфликта продолжить
+git cherry-pick --abort       # отменить cherry-pick и вернуть состояние до команды
+git cherry-pick <commit1> <commit2> ...   # применить несколько коммитов подряд

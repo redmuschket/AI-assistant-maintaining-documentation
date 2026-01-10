@@ -6,6 +6,12 @@
 {% block workspace %}
 <h1>Добавить файл</h1>
 
+{% if form.errors %}
+    <div class="alert alert-danger">
+        {{ form.errors }}
+    </div>
+{% endif %}
+
 <form action="{% url 'file:upload_api' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" id="fileInput" class="d-none" name="file">
@@ -29,8 +35,7 @@
         Загрузить файл
     </button>
 </form>
-{% endblock %}
 
-{% block extra_js %}
-<script src="{% static 'js/index.js' %}"></script>
+{% include "file/modal_error_form.html" %}
+
 {% endblock %}

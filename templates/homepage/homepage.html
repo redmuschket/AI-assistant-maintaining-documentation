@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'page.html' %}
+{% load static %}
+
+{% block content_page %}
+
+<div>
+    <section class="hero background-tree_pattern">
+        {% include "homepage/here.html" %}
+    </section>
+
+    {% load important %}
+    <section class="important">
+        {% block important %}
+            {% render_important_items %}
+        {% endblock %}
+    </section>
+
+    <section class="examples background-tree_pattern">
+        {% include "homepage/examples.html" %}
+    </section>
+</div>
+
+{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'homepage/css/main.important.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/main.exemples.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/main.hero.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/main.stats.css' %}">
+{% endblock %}

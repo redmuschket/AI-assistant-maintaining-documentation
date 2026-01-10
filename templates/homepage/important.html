@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% block important %}
+{% load static %}
+
+<div class="important-container">
+    <div class="important-title">Почему это важно</div>
+    <div class="important-subtitle">
+        Модульный подход в создании контента позволяет легко объяснять лор и делиться им с сообществом
+    </div>
+
+    <div class="important-grid">
+        {% for item in items %}
+            <div class="important-card">
+                <div class="important-icon">
+                    <img
+                        class="{{ item.icon }}"
+                        src="{{ item.icon_src }}"
+                        alt="{{ item.title }}"
+                    >
+                </div>
+                <div class="important-title">{{ item.title }}</div>
+                <div class="important-description">{{ item.description }}</div>
+
+                <div class="important-item-grid">
+                    {% for row in item.rows %}
+                        <div>
+                            <img
+                                class="check-mark-icon"
+                                src="{% static 'homepage/image/check_mark.svg' %}"
+                                alt="✔"
+                            >
+                            {{ row }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

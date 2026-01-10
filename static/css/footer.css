@@ -1,0 +1,94 @@
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 80px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-content .logo-zone {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.footer-content .site-logo {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-content .site-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.footer-nav a {
+    font-size: 0.95rem;
+    color: #64748b;
+    transition: color 0.2s ease;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2rem;
+}
+
+.footer-nav a:hover {
+    color: #76B852;
+    text-decoration-color: #76B852;
+    text-decoration-thickness: 2px;
+}
+
+.footer-content ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.footer-youtube-icon,
+.footer-vk-icon,
+.footer-instagram-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease;
+}
+
+.footer-youtube-icon:hover,
+.footer-vk-icon:hover,
+.footer-instagram-icon:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+}

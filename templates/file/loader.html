@@ -1,0 +1,36 @@
+{% extends 'workspace.html' %}
+{% load static %}
+
+{% block title %}Добавить файл{% endblock %}
+
+{% block workspace %}
+<h1>Добавить файл</h1>
+
+<form action="{% url 'file:upload_api' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" id="fileInput" class="d-none" name="file">
+
+    <label for="fileInput" class="upload-area">
+        <div class="upload-icon">
+            <i class="bi bi-cloud-arrow-up"></i>
+        </div>
+        <p class="upload-text">Перетащите файл сюда или нажмите для выбора</p>
+    </label>
+
+    <div id="fileInfo" class="file-info d-none">
+        <div class="file-preview"></div>
+        <div class="file-details">
+            <p class="file-name"></p>
+            <p class="file-size"></p>
+        </div>
+        <button type="button" class="btn-remove">×</button>
+    </div>
+    <button type="submit" id="uploadBtn" class="btn btn-lg btn-light fw-bold border-white bg-white">
+        Загрузить файл
+    </button>
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}

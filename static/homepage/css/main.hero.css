@@ -1,0 +1,141 @@
+.hero{
+    font-family: 'Roboto', sans-serif;
+    padding: 8rem 5rem;
+}
+
+.hero-container {
+    display: flex;
+}
+
+.hero-content{
+    text-align: left;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-support-content .view-content {
+    display: flex !important;
+    gap: 1.5rem;
+    perspective: 1000px;
+}
+
+.hero-support-content .views-row {
+    transition: transform 0.6s ease;
+}
+
+.hero-support-content .views-row-1 {
+    transform: scale(0.95) rotate(6deg);
+}
+
+.hero-support-content .views-row-2 {
+    transform: scale(0.95) rotate(-6deg) translateY(-40px);
+}
+
+.hero-support-content .views-row-1:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10;
+}
+
+.hero-support-content .views-row-2:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero-title .highlight-green {
+    color: #76B852;
+}
+
+.hero-subtitle {
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    font-weight: 600;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 24px;
+}
+
+.btna {
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 3px solid transparent;
+    min-height: 50px;
+    position: relative;
+}
+
+.btna img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.2s ease;
+}
+
+.btna .default-icon {
+    opacity: 1;
+}
+
+.btna .hover-icon {
+    opacity: 0;
+}
+
+.btna:hover .default-icon {
+    opacity: 0;
+}
+
+.btna:hover .hover-icon {
+    opacity: 1;
+}
+
+.btn-create-base,
+.btn-show-base {
+    padding-left: 38px;
+}
+
+/* Стили кнопок */
+.btn-create-base {
+    background-color: #76B852;
+    color: white;
+    border-color: #76B852;
+}
+
+.btn-create-base:hover {
+    background-color: white;
+    color: #76B852;
+    border-color: #D8EAC9;
+    transform: translateY(-3px);
+}
+
+.btn-show-base {
+    background-color: white;
+    color: #76B852;
+    border-color: #D8EAC9;
+}
+
+.btn-show-base:hover {
+    background-color: #76B852;
+    color: white;
+    border-color: #76B852;
+    transform: translateY(-3px);
+}

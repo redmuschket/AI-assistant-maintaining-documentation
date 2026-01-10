@@ -1,0 +1,129 @@
+.important-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.important-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.important-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Сетка карточек */
+.important-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+/* Карточка */
+.important-card {
+    max-width: 285px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.75rem 1.5rem 4rem;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e5f1d8;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    align-items: center;
+    text-align: center;
+}
+
+.important-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(118, 184, 82, 0.25), transparent 55%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+}
+
+.important-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    border-color: #c4e3a1;
+}
+
+.important-card:hover::before {
+    opacity: 1;
+}
+
+/* Иконка карточки */
+.important-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem auto;
+    flex-shrink: 0;
+}
+
+.important-icon img {
+    width: 56px;
+    height: 56px;
+    display: block;
+}
+
+/* Заголовок и текст */
+.important-card > .important-title {
+    font-size: 1.64rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.important-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 0.25rem;
+}
+
+/* Список фич внутри карточки */
+.important-item-grid > div {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 1.2rem;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.important-item-grid {
+    align-items: center;
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: grid;
+    gap: 12px;
+}
+
+.important-item-grid > div {
+    justify-content: center;
+}
+
+/* Иконка галочки */
+.check-mark-icon {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+}
+
+
+

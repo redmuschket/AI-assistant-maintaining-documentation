@@ -1,0 +1,121 @@
+/* Примеры баз */
+.examples-container {
+    padding: 54px 25px 54px 25px;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    gap: 52px;
+}
+
+.examples-content-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+}
+
+.examples-content-title > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 60%;
+    margin: 0 auto;
+}
+
+.section-title{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.section-subtitle{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.examples-base-btn {
+    align-self: center;
+    margin-left: auto;
+}
+
+.examples-base-btn a {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 12px 28px;
+    background-color: white;
+    color: #76B852;
+    border: 2px solid #76B852;
+    border-radius: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.examples-base-btn a:hover {
+    background-color: #76B852;
+    color: white;
+    border-color: #76B852;
+    transform: translateY(-3px);
+    text-decoration: none !important;
+}
+
+.examples-content-stats-grid{
+    display: flex;
+    gap: 40px;
+}
+
+.examples-content-stats-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.content-stat-item {
+    background: #F9FFF2;
+    color: #808080;
+    padding: 30px;
+    border-radius: 15px;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.content-stat-item-number{
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.content-stat-item-title{
+    font-size: 1.8rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.view-list-bases .view-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.view-list-bases .views-row {
+    height: 100%;
+    width: 100%;
+}
+
+.view-list-bases .views-row:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,35 @@
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.elements-icon,
+.student-card-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}

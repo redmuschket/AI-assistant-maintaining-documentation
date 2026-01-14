@@ -37,7 +37,7 @@ def upload_api(request):
 
 def loader_page(request):
     files = File.objects.all()
-    return render(request, 'file\loader.html', {'files': files})
+    return render(request, 'file/loader.html', {'files': files})
 
 def delete_file(request, pk):
     if request.method == 'POST':

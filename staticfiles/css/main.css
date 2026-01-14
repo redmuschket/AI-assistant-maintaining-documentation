@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Для мобильных (до 768px) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero-support-content .view-content {
+        flex-direction: column; /* Элементы View в колонку */
+        align-items: center;
+    }
+
+    .hero-support-content .views-row-1,
+    .hero-support-content .views-row-2 {
+        transform: none; /* Убираем повороты на мобильных */
+        margin-bottom: 1rem;
+    }
+
+    .stats {
+        gap: 1rem;
+    }
+
+    .stat-number,
+    .stat-label {
+        font-size: 1.3rem;
+    }
+}

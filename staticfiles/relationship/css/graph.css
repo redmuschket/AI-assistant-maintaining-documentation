@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    background: #1a1a1a;
+    overflow: hidden;
+    color: white;
+    font-family: sans-serif;
+}
+
+#graph-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+button.active {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+}
